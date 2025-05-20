@@ -11,6 +11,7 @@
     "@types/node": "^16.18.126",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "d3": "^7.9.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
@@ -21,7 +22,7 @@
     "serve-data": "json-server --watch ../simulation_data.json --port 4000",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --config jest.config.ts",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,8 +46,11 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
+    "@types/d3": "^7.4.3",
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
-    "ts-jest": "^29.3.4"
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.3.4",
+    "ts-node": "^10.9.2"
   }
 }
