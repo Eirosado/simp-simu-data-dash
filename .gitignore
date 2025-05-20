@@ -3,7 +3,8 @@ __pycache__/
 *.py[cod]
 .env
 venv/
+simulation_data.json
+simulation_log.txt
 
-# Node / Build output
-node_modules/
-dist/
+# Editor settings
+.vscode/
