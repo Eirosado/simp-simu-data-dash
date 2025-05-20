@@ -4,6 +4,7 @@ import { fetchSimulationData } from './utils/fetch-data';
 import { transformData }       from './utils/transform-data';
 import { SimulationData }      from './types';
 import { DataTable } from './components/data-table';
+import { StatusChart } from './components/status-chart';
 
 function App() {
   const [rawData, setRawData]             = useState<SimulationData[]>([]);
@@ -26,6 +27,7 @@ function App() {
 
   return (
      <div style={{ padding: 16 }}>
+      <StatusChart data={transformedData} />
       <DataTable data={transformedData} />
     </div>
   );
