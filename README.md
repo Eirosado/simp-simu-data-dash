@@ -1,6 +1,3 @@
-# simp-simu-data-dash
-Simple Simulation Data Dashboard
-
 # Scientific Simulation Data Dashboard
 
 This project consists of two main parts:
