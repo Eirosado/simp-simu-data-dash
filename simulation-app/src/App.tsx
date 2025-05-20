@@ -1,26 +1,31 @@
+// src/App.tsx
 import React, { useEffect, useState } from 'react';
-import { fetchSimulationData } from './utils/fetchData';
-import { SimulationData } from './types';
+import { fetchSimulationData } from './utils/fetch-data';
+import { transformData }       from './utils/transform-data';
+import { SimulationData }      from './types';
 
 function App() {
-  const [data, setData] = useState<SimulationData[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [rawData, setRawData]             = useState<SimulationData[]>([]);
+  const [transformedData, setTransData]   = useState<SimulationData[]>([]);
+  const [loading, setLoading]             = useState(true);
+  const [error, setError]                 = useState<string | null>(null);
 
   useEffect(() => {
     fetchSimulationData()
-      .then(setData)
-      .catch((err) => setError(err.message))
+      .then(raw => {
+        setRawData(raw);
+        setTransData(transformData(raw));
+      })
+      .catch(err => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div>Loading data…</div>;
-  if (error) return <div className="error">Error: {error}</div>;
-  if (!data) return null;
+  if (loading) return <div>Loading…</div>;
+  if (error)   return <div className="error">Error: {error}</div>;
 
   return (
     <div>
-      {/* Pass data to table/chart components */}
+      {/* Example: pass transformedData into your DataTable */}
     </div>
   );
 }
