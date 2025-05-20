@@ -35,14 +35,14 @@ This project consists of two main parts:
 ├── README.md                # Project overview and setup instructions
 └── simulation-app/          # React + TypeScript application
     ├── README.md            # React app-specific instructions
-    ├── .gitignore           # React-specific ignores (node_modules/, build/)
+    ├── .gitignore           # React-specific ignores 
     ├── package.json         # Dependencies and scripts for React app
     ├── tsconfig.json        # TypeScript configuration for React app
-    ├── jest.config.js       # Jest configuration for TypeScript tests
+    ├── jest.config.ts      # Jest configuration for TypeScript tests
     └── src/                 # React application source
         ├── components/      # React components (DataTable.tsx, StatusChart.tsx)
         ├── utils/           # Helper functions (fetchData.ts, transformData.ts)
-        ├── tests/           # React component and util tests (.test.tsx)
+        ├── tests/           # React component and util tests 
         ├── types.ts         # Shared TypeScript interfaces
         ├── App.tsx          # Main app component
         ├── index.tsx        # App entry point
