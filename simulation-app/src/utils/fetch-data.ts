@@ -1,7 +1,7 @@
 import { SimulationData } from '../types';
 
 export async function fetchSimulationData(): Promise<SimulationData[]> {
-  const res = await fetch('/simulation_data.json');
+  const res = await fetch('http://localhost:4000/simulations');
   if (!res.ok) {
     throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   }

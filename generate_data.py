@@ -58,8 +58,9 @@ def generate_simulation_data(n=150):
 if __name__ == "__main__":
     try:
         sims = generate_simulation_data(150)
+        output = { "simulations": sims }               
         with open("simulation_data.json", "w") as f:
-            json.dump(sims, f, indent=2)
-        print(f"simulation_data.json generated with {len(sims)} entries.")
+            json.dump(output, f, indent=2)
+        print(f"simulation_data.json generated with {len(sims)} simulations.")
     except Exception as e:
         logging.critical(f"Failed to write simulation data to JSON file: {e}")

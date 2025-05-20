@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchSimulationData } from './utils/fetch-data';
 import { transformData }       from './utils/transform-data';
 import { SimulationData }      from './types';
+import { DataTable } from './components/data-table';
 
 function App() {
   const [rawData, setRawData]             = useState<SimulationData[]>([]);
@@ -24,8 +25,8 @@ function App() {
   if (error)   return <div className="error">Error: {error}</div>;
 
   return (
-    <div>
-      {/* Example: pass transformedData into your DataTable */}
+     <div style={{ padding: 16 }}>
+      <DataTable data={transformedData} />
     </div>
   );
 }
