@@ -17,7 +17,7 @@ export function StatusChart({ data, statusColors }: StatusChartProps) {
     ChartRenderer(ref.current, chartData, statusColors);
   }, [chartData, statusColors]);
 
-  return <svg ref={ref} width="100%" height="350" />;
+  return <svg ref={ref} width="100%" height="350" role="img" aria-labelledby="chart-title" />;
 }
 
 function processChartData(data: SimulationData[]) {
@@ -50,12 +50,15 @@ function ChartRenderer(svgElement: SVGSVGElement, data: { status: string; count:
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
 
   svg.append('text')
+    .attr('id', 'chart-title')
     .attr('x', width / 2 + margin.left)
     .attr('y', margin.top / 2)
     .attr('text-anchor', 'middle')
-    .style('font-size', '18px')
-    .style('fill', '#333')
-    .text('Distribution of Status Categories');
+    .style('font-size', '24px')
+    .style('fill', '#1976d2')
+    .style('font-weight', 'bold')
+    .text('Distribution of Status Categories')
+    .attr('aria-hidden', 'true'); 
 
   g.append('g').call(d3.axisLeft(y));
   g.append('text')
@@ -64,7 +67,8 @@ function ChartRenderer(svgElement: SVGSVGElement, data: { status: string; count:
     .attr('transform', 'rotate(-90)')
     .attr('text-anchor', 'middle')
     .style('font-size', '14px')
-    .text('Count');
+    .text('Count')
+    .attr('aria-hidden', 'true');
 
   g.append('g')
     .attr('transform', `translate(0,${height})`)
@@ -75,7 +79,8 @@ function ChartRenderer(svgElement: SVGSVGElement, data: { status: string; count:
     .attr('y', height + margin.bottom - 10)
     .attr('text-anchor', 'middle')
     .style('font-size', '14px')
-    .text('Status Categories');
+    .text('Status Categories')
+    .attr('aria-hidden', 'true');
 
   g.selectAll('.bar')
     .data(data)
@@ -86,5 +91,7 @@ function ChartRenderer(svgElement: SVGSVGElement, data: { status: string; count:
     .attr('y', (d) => y(d.count))
     .attr('width', x.bandwidth())
     .attr('height', (d) => height - y(d.count))
-    .attr('fill', (d) => statusColors[d.status]);
+    .attr('fill', (d) => statusColors[d.status])
+    .attr('role', 'presentation') 
+    .attr('aria-label', (d) => `Status: ${d.status}, Count: ${d.count}`);
 }
