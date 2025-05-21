@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import { StatusChart } from '../components/status-chart';
-import { SimulationData } from '../types';
+import { StatusChart } from '../components/charts/status-chart';
+import { SimulationData } from '../types/simu-data-types';
 
 describe('StatusChart', () => {
   const sampleData: SimulationData[] = [
@@ -10,8 +10,16 @@ describe('StatusChart', () => {
     { id: 'd', timestamp: '2025-05-04T00:00:00Z', value: 40, parameter_set: 'Delta', status: 'failed', performance_index: 0 },
   ];
 
+  const statusColors: Record<SimulationData["status"], string> = {
+  "completed": "#4CAF50",  // Green ✅
+  "running": "#2196F3",    // Blue ⬆⬇
+  "failed": "#F44336",     // Red ❌
+  "pending": "#FFD700"     // Gold ⏳
+};
+
+
   beforeEach(() => {
-    render(<StatusChart data={sampleData} />);
+    render(<StatusChart data={sampleData} statusColors={statusColors} />);
   });
 
   it('renders the SVG container', async () => {

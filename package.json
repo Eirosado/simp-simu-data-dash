@@ -1,0 +1,23 @@
+{
+  "name": "simp-simu-data-dash",
+  "version": "1.0.0",
+  "description": "Project containing a JSON data generator and a React dashboard.",
+  "scripts": {
+    "generate-data": "python generate_data.py",
+    "test-python": "python -m pytest",
+    "serve-data": "json-server --watch simulation_data.json --port 4000"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3"
+  },
+  "author": "EiRosado",
+  "license": "MIT",
+  "homepage": "https://github.com/Eirosado/simp-simu-data-dash",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eirosado/simp-simu-data-dash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Eirosado/simp-simu-data-dash/issues"
+  }
+}

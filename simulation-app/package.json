@@ -19,7 +19,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "serve-data": "json-server --watch ../simulation_data.json --port 4000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest --config jest.config.ts",

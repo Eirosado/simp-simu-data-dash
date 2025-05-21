@@ -6,5 +6,8 @@ venv/
 simulation_data.json
 simulation_log.txt
 
+#Node
+/node_modules
+
 # Editor settings
 .vscode/
