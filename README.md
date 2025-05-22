@@ -6,7 +6,7 @@ A full-stack project for generating, serving, and visualizing simulation data us
 ## **🔗 Live Demo **
 You can view and test the application directly at this link:
 
-   https://codesandbox.io/p/github/Eirosado/simp-simu-data-dash/draft/jolly-williamson
+  https://codesandbox.io/p/github/Eirosado/simp-simu-data-dash/main
 
 ---
 
@@ -80,7 +80,7 @@ npm run eject       # Optional: eject CRA config
 ├── simulation_data.json       # Generated data
 ├── tests/                     # Python unit tests
 ├── requirements.txt           # Python dependencies
-├── package.json               # Scripts for Python + server
+├── package.json               # Scripts for Python + json-server
 ├── README.md                  # You are here!
 └── simulation-app/            # React + TypeScript dashboard
     ├── README.md              # React app docs
@@ -90,13 +90,13 @@ npm run eject       # Optional: eject CRA config
     ├── public/
     └── src/
         ├── components/        # UI components
-        ├── charts/            # Chart components
-        ├── data-table/        # Data table components & hooks
-        ├── services/          # API services
+            ├── charts/            # Chart components
+            ├── data-table/        # Data table components & hooks
         ├── hooks/             # Custom hooks
-        ├── utils/             # Helper functions
+        ├── services/          # service for data loading & parsing
         ├── types/             # TypeScript types
         ├── tests/             # Jest tests
+        ├── utils/             # Helper functions
         ├── App.tsx
         ├── index.tsx
         └── index.css
