@@ -1,94 +1,136 @@
-# Scientific Simulation Data Dashboard
+# **🧪 Scientific Simulation Data Dashboard**
+
+A full-stack project for generating, serving, and visualizing simulation data using **Python** and **React + TypeScript**.
+
+---
+
+## **📁 Project Overview**
 
 This project consists of two main parts:
 
-## 1. Data Generation (Python)
+1. **Data Generation (Python)**
+2. **Interactive Web Dashboard (React + TypeScript)**
 
-- **Script**: `generate_data.py` creates mock simulation data and writes it to `simulation_data.json`.
-- **Virtual Environment**: Uses a `venv/` directory (ignored by Git) to isolate dependencies.
-- **Dependencies**: Optionally install `pandas` and `numpy`:
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate     # Windows: .\venv\Scripts\Activate.ps1
-  pip install pandas numpy
-  ```
-- **Run the Script**:
-  ```bash
-  python generate_data.py
-  ```
-- **Output**: The file `simulation_data.json` will appear in the project root.
+---
 
-## 2. Web Application (React + TypeScript)
+## **🔬 1. Data Generation**
 
-- Located in the `simulation-app/` folder, a standalone Create React App initialized with TypeScript.
-- Uses **TypeScript** for type safety and **React Testing Library** + **Jest** for component and utility tests.
+* **Script-based Workflow**: Data generation and testing are triggered via `npm` scripts (no need to run Python directly).
+* **Mock Data Server**: Powered by `json-server` to serve the generated simulation data.
 
-## Project Structure
+### **📦 Key Files**
 
+* `generate_data.py`: Main data generation script
+* `simulation_data.json`: Generated mock data
+* `tests/`: Python unit tests
+
+### **📜 Available Commands**
+
+Run from the **project root**:
+
+```bash
+npm run generate-data    # Generate new simulation data
+npm run test-python      # Run Python unit tests
+npm run serve-data       # Start JSON Server at http://localhost:3001
+```
+
+---
+
+## **💻 2. Web Application (React + TypeScript)**
+
+Interactive frontend dashboard built with React, TypeScript, Material UI, and Chart.js.
+
+### **📁 Location**
+
+`simulation-app/`
+
+### **🔧 Features**
+
+* Type-safe code with TypeScript
+* Data fetching and transformation
+* Filtering and sorting
+* Responsive layout with Material UI
+* Visualization with charts
+* Fully tested using **Jest + React Testing Library**
+
+### **📜 Commands**
+
+Run from the `simulation-app/` directory:
+
+```bash
+npm run start       # Start development server
+npm run build       # Build production app
+npm run test        # Run React unit tests
+npm run eject       # Optional: eject CRA config
+```
+
+---
+
+## **📂 Directory Structure**
+
+```
 / (root)
-├── generate_data.py         # Python script for data generation
-├── simulation_data.json     # Generated mock data
-├── venv/                    # Python virtual environment (git-ignored)
-├── tests/                   # Python unit tests for data generation
-├── .gitignore               # Root ignores (venv/, __pycache__/, .vscode/)
-├── requirements.txt         # (Optional) Python dependencies lock file
-├── README.md                # Project overview and setup instructions
-└── simulation-app/          # React + TypeScript application
-    ├── README.md            # React app-specific instructions
-    ├── .gitignore           # React-specific ignores 
-    ├── package.json         # Dependencies and scripts for React app
-    ├── tsconfig.json        # TypeScript configuration for React app
-    ├── jest.config.ts      # Jest configuration for TypeScript tests
-    └── src/                 # React application source
-        ├── components/      # React components (DataTable.tsx, StatusChart.tsx)
-        ├── utils/           # Helper functions (fetchData.ts, transformData.ts)
-        ├── tests/           # React component and util tests 
-        ├── types.ts         # Shared TypeScript interfaces
-        ├── App.tsx          # Main app component
-        ├── index.tsx        # App entry point
-        └── index.css        # Global styles
+├── generate_data.py           # Python script for mock data
+├── simulation_data.json       # Generated data
+├── tests/                     # Python unit tests
+├── requirements.txt           # Python dependencies
+├── package.json               # Scripts for Python + server
+├── README.md                  # You are here!
+└── simulation-app/            # React + TypeScript dashboard
+    ├── README.md              # React app docs
+    ├── package.json           # Scripts for React
+    ├── tsconfig.json          # TypeScript config
+    ├── jest.config.ts         # Jest testing config
+    ├── public/
+    └── src/
+        ├── components/        # UI components
+        ├── charts/            # Chart components
+        ├── data-table/        # Data table components & hooks
+        ├── services/          # API services
+        ├── hooks/             # Custom hooks
+        ├── utils/             # Helper functions
+        ├── types/             # TypeScript types
+        ├── tests/             # Jest tests
+        ├── App.tsx
+        ├── index.tsx
+        └── index.css
+```
 
-## Getting Started
+---
 
-### A. Generate Simulation Data (Python)
+## **🚀 Getting Started**
 
-1. Activate the virtual environment:
-   ```bash
-   source venv/bin/activate     # Windows: .\venv\Scripts\Activate.ps1
-   ```
-2. (Optional) Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the data generation script:
-   ```bash
-   python generate_data.py
-   ```
+### **A. Generate & Serve Data**
 
-### B. Run the React Application
+From the **project root**:
 
-1. Navigate to the React app directory:
-   ```bash
-   cd simulation-app
-   ```
-2. Install dependencies and start the development server:
-   ```bash
-   npm install
-   npm start
-   ```
-3. Open your browser at `http://localhost:3000`.
+```bash
+npm run generate-data
+npm run serve-data
+```
 
-### C. Run Tests
+* Visit the data endpoint at: `http://localhost:3001/simulations`
 
-- **Python Tests**:
+### **B. Run the Web App**
+
+From `simulation-app/`:
+
+```bash
+npm run start
+```
+
+* App runs on: `http://localhost:3000`
+
+### **C. Run Tests**
+
+* **Python**:
+
   ```bash
-  pytest
+  npm run test-python
   ```
+* **React**:
 
-- **React Tests**:
   ```bash
   cd simulation-app
-  npm test
+  npm run test
   ```
-
-
