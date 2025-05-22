@@ -18,7 +18,6 @@ export function DataTableContainer({ data, statusColors, statusIcons }: {
 
   return (
     <Paper sx={{ p: 2 }}>
-      {/* Título accesible con aria-live */}
       <Typography 
         variant="h5" 
         gutterBottom 
@@ -28,10 +27,8 @@ export function DataTableContainer({ data, statusColors, statusIcons }: {
         Simulation Data Table
       </Typography>
 
-      {/* Controles de filtrado con atributos accesibles */}
       <FilterControls state={state} setState={setState} aria-label="Data filtering options" />
 
-      {/* Tabla de datos con roles accesibles */}
       <SortableTable
         data={filteredData}
         orderBy={state.orderBy}
@@ -42,7 +39,6 @@ export function DataTableContainer({ data, statusColors, statusIcons }: {
         statusIcons={statusIcons}
       />
 
-      {/* Botón de exportación accesible */}
       <Box display="flex" justifyContent="flex-end" mt={2}>
         <CsvExportButton data={filteredData} aria-label="Export simulation data as CSV" />
       </Box>

@@ -12,7 +12,7 @@ interface FilterControlsProps {
 export function FilterControls({ state, setState }: FilterControlsProps) {
   return (
     <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
-      {/* Campo de búsqueda accesible */}
+
       <TextField
         label="Search"
         variant="outlined"
@@ -22,7 +22,6 @@ export function FilterControls({ state, setState }: FilterControlsProps) {
         aria-label="Search simulation data"
       />
 
-      {/* Filtro de estado accesible */}
       <FilterSelect 
         label="Status" 
         value={state.filterStatus} 
@@ -31,7 +30,7 @@ export function FilterControls({ state, setState }: FilterControlsProps) {
         aria-label="Filter data by status"
       />
 
-      {/* Filtro de parámetro accesible */}
+
       <FilterSelect 
         label="Parameter" 
         value={state.filterParam} 
