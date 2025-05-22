@@ -80,20 +80,19 @@ npm run eject       # Optional: eject CRA config
 ├── simulation_data.json       # Generated data
 ├── tests/                     # Python unit tests
 ├── requirements.txt           # Python dependencies
-├── package.json               # Scripts for Python + server
+├── package.json               # Scripts for Python + json-server
 ├── README.md                  # You are here!
 └── simulation-app/            # React + TypeScript dashboard
-    ├── README.md              # React app docs
     ├── package.json           # Scripts for React
     ├── tsconfig.json          # TypeScript config
     ├── jest.config.ts         # Jest testing config
     ├── public/
     └── src/
         ├── components/        # UI components
-        ├── charts/            # Chart components
-        ├── data-table/        # Data table components & hooks
-        ├── services/          # API services
+            ├── charts/            # Chart components
+            ├── data-table/        # Data table components & hooks
         ├── hooks/             # Custom hooks
+        ├── services/          # service for data loading & parsing
         ├── utils/             # Helper functions
         ├── types/             # TypeScript types
         ├── tests/             # Jest tests
