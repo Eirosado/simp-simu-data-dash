@@ -83,6 +83,7 @@ npm run eject       # Optional: eject CRA config
 ├── package.json               # Scripts for Python + json-server
 ├── README.md                  # You are here!
 └── simulation-app/            # React + TypeScript dashboard
+    ├── README.md              # React app docs
     ├── package.json           # Scripts for React
     ├── tsconfig.json          # TypeScript config
     ├── jest.config.ts         # Jest testing config
