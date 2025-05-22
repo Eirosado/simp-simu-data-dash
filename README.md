@@ -2,6 +2,12 @@
 
 A full-stack project for generating, serving, and visualizing simulation data using **Python** and **React + TypeScript**.
 
+
+## **🔗 Live Demo **
+You can view and test the application directly at this link:
+
+   https://codesandbox.io/p/github/Eirosado/simp-simu-data-dash/draft/jolly-williamson
+
 ---
 
 ## **📁 Project Overview**
