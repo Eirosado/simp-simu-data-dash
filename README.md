@@ -94,9 +94,9 @@ npm run eject       # Optional: eject CRA config
             ├── data-table/        # Data table components & hooks
         ├── hooks/             # Custom hooks
         ├── services/          # service for data loading & parsing
-        ├── utils/             # Helper functions
         ├── types/             # TypeScript types
         ├── tests/             # Jest tests
+        ├── utils/             # Helper functions
         ├── App.tsx
         ├── index.tsx
         └── index.css
