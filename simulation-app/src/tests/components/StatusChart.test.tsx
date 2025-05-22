@@ -1,6 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import { StatusChart } from '../components/charts/status-chart';
-import { SimulationData } from '../types/simu-data-types';
+import { SimulationData } from '../../types/simu-data-types';
+import { StatusChart } from '../../components/charts/StatusChart';
+
 
 describe('StatusChart', () => {
   const sampleData: SimulationData[] = [
@@ -11,10 +12,10 @@ describe('StatusChart', () => {
   ];
 
   const statusColors: Record<SimulationData["status"], string> = {
-  "completed": "#4CAF50",  // Green ✅
-  "running": "#2196F3",    // Blue ⬆⬇
-  "failed": "#F44336",     // Red ❌
-  "pending": "#FFD700"     // Gold ⏳
+  "completed": "#4CAF50",  
+  "running": "#2196F3",    
+  "failed": "#F44336",     
+  "pending": "#FFD700"     
 };
 
 

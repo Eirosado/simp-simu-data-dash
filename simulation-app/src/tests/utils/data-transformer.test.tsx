@@ -1,5 +1,5 @@
-import { SimulationData } from '../types/simu-data-types';
-import { DataTransformer } from '../utils/data-transformer';
+import { SimulationData } from "../../types/simu-data-types";
+import { DataTransformer } from "../../utils/data-transformer";
 
 describe('DataTransformer', () => {
   const mockData: SimulationData[] = [
