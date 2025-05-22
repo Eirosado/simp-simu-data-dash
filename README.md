@@ -6,7 +6,7 @@ A full-stack project for generating, serving, and visualizing simulation data us
 ## **🔗 Live Demo **
 You can view and test the application directly at this link:
 
-   https://codesandbox.io/p/github/Eirosado/simp-simu-data-dash/draft/jolly-williamson
+  https://codesandbox.io/p/github/Eirosado/simp-simu-data-dash/main
 
 ---
 
