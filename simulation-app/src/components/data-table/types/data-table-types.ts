@@ -1,4 +1,4 @@
-import { SimulationData } from '../../../types/simu-data-types';
+import { SimulationData } from "../../../types/simu-data-types";
 
 export interface DataTableState {
   search: string;

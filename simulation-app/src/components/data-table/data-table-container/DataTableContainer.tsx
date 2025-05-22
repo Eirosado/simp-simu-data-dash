@@ -1,10 +1,12 @@
 import { Paper, Box, Typography } from '@mui/material';
-import { SimulationData } from '../../types/simu-data-types';
-import { FilterControls } from './filter-controls';
-import { SortableTable } from './sortable-table';
-import { CsvExportButton } from './csv-xport-btn';
-import { useDataTableState } from './hooks/use-data-table-state';
-import { filterData } from './utils/filter-utils';
+import { SimulationData } from '../../../types/simu-data-types';
+import { useDataTableState } from '../hooks/use-data-table-state';
+import { filterData } from '../utils/filter-utils';
+import { CsvExportButton } from './components/CsvExportBtn';
+import { SortableTable } from './components/SortableTable';
+import { FilterControls } from './components/FilterControls';
+
+
 
 export function DataTableContainer({ data, statusColors, statusIcons }: { 
   data: SimulationData[];

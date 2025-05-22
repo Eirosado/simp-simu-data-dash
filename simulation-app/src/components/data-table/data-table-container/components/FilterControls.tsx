@@ -1,6 +1,8 @@
 import { TextField } from '@mui/material';
-import { FilterSelect } from './filter-select';
-import { FilterControlsState } from './types/filter-controls-types';
+import { FilterControlsState } from '../../types/filter-controls-types';
+import { FilterSelect } from './FilterSelect';
+
+
 
 interface FilterControlsProps {
   state: FilterControlsState;
@@ -16,7 +18,7 @@ export function FilterControls({ state, setState }: FilterControlsProps) {
         variant="outlined"
         size="small"
         value={state.search}
-        onChange={(e) => setState({ search: e.target.value })}
+        onChange={(e) => setState({ search: e.target.value  })}
         aria-label="Search simulation data"
       />
 

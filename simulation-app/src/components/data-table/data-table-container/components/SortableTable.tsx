@@ -3,9 +3,9 @@ import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
   TableSortLabel, TableFooter, TablePagination
 } from '@mui/material';
-import { SimulationData } from '../../types/simu-data-types';
-import { sortData } from './utils/sort-utils';
-import { usePagination } from './hooks/use-pagination';
+import { SimulationData } from '../../../../types/simu-data-types';
+import { sortData } from '../../utils/sort-utils';
+import { usePagination } from '../../hooks/use-pagination';
 
 interface SortableTableProps {
   data: SimulationData[];

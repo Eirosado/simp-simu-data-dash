@@ -1,5 +1,5 @@
-import { SimulationData } from '../../../types/simu-data-types';
 import { DataTableState } from '../types/data-table-types';
+import { SimulationData } from '../../../types/simu-data-types';
 
 export function filterData(data: SimulationData[], state: DataTableState): SimulationData[] {
   return data.filter(({ status, parameter_set, ...item }) =>

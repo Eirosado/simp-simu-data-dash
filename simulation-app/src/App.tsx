@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Box, Paper, Tab, Tabs } from '@mui/material';
-import { DataTableContainer } from './components/data-table/data-table-container';
-import { StatusChart } from './components/charts/status-chart';
 import { statusColors, statusIcons } from './utils/status-utils';
 import { useFetchSimulationData } from './hooks/use-fetch-simu-data';
+import { DataTableContainer } from './components/data-table/data-table-container/DataTableContainer';
+import { StatusChart } from './components/charts/StatusChart';
+
 
 
 function App() {

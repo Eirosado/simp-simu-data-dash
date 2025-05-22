@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
-import { SimulationData } from '../../types/simu-data-types';
-import { CsvExporter } from '../../utils/csv-exporter';
+import { SimulationData } from '../../../../types/simu-data-types';
+import { CsvExporter } from '../../../../utils/csv-exporter';
 
 interface CsvExportButtonProps {
   data: SimulationData[];
