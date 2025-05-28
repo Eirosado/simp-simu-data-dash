@@ -37,7 +37,7 @@ Run from the **project root**:
 ```bash
 npm run generate-data    # Generate new simulation data
 npm run test-python      # Run Python unit tests
-npm run serve-data       # Start JSON Server at http://localhost:3001
+npm run serve-data       # Start JSON Server at http://localhost:4000
 ```
 
 ---
@@ -90,8 +90,8 @@ npm run eject       # Optional: eject CRA config
     ├── public/
     └── src/
         ├── components/        # UI components
-            ├── charts/            # Chart components
-            ├── data-table/        # Data table components & hooks
+            ├── charts/        # Chart components
+            ├── data-table/    # Data table components & hooks
         ├── hooks/             # Custom hooks
         ├── services/          # service for data loading & parsing
         ├── types/             # TypeScript types
@@ -108,21 +108,24 @@ npm run eject       # Optional: eject CRA config
 
 ### **A. Generate & Serve Data**
 
-From the **project root**:
+From the **project root** open a **new terminal** and run:
 
 ```bash
+npm install # Install dependencies 
 npm run generate-data
 npm run serve-data
 ```
+    Note: Keep this terminal running to serve data continuously.
 
-* Visit the data endpoint at: `http://localhost:3001/simulations`
+* Visit the data endpoint at: `http://localhost:4000/simulations`
 
 ### **B. Run the Web App**
 
-From `simulation-app/`:
+From `simulation-app/` open a **new terminal** and run:
 
 ```bash
-npm run start
+npm install # Install dependencies 
+npm start
 ```
 
 * App runs on: `http://localhost:3000`
